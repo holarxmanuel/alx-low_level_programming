@@ -17,5 +17,7 @@ int main(void)
 		putchar(alphabet_low);
 		ch++;
 	}
+	putchar('\n');
+
 	return (0);
 }
