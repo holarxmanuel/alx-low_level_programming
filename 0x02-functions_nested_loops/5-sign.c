@@ -7,13 +7,13 @@
  */
 int print_sign(int n)
 {
-	char p = 43;
+	char pos = 43;
 	char zero = 48;
-	char n = 45;
+	char neg = 45;
 
 	if (n > 0)
 	{
-		_putchar(p);
+		_putchar(pos);
 		return (1);
 	}
 	else if (n == 0)
@@ -23,7 +23,7 @@ int print_sign(int n)
 	}
 	else
 	{
-		_putchar(n);
+		_putchar(neg);
 		return (-1);
 	}
 }
