@@ -10,6 +10,7 @@ int print_last_digit(int n)
 {
 	int last_digit = n % 10;
 	int last_digit_value = 48;
+	int i;
 
 	for (i = 0; i < last_digit; i++)
 	{
