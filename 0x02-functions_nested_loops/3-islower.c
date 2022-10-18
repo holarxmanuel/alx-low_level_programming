@@ -5,7 +5,7 @@
  * @c: the stand
  * Return: 1 if lowercase
  */
-int _islower(int c);
+int _islower(int c)
 {
 	if (c >= 'a' && c <= 'z')
 	{
