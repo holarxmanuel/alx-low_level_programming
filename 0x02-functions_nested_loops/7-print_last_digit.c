@@ -13,6 +13,7 @@ int print_last_digit(int n)
 
 	for (i = 0; i < 10; i++)
 	{
+	
 		last_digit = n % 10;
 
 		if (last_digit == i)
@@ -21,4 +22,5 @@ int print_last_digit(int n)
 			break;
 		}
 	}
+	return (last_digit);
 }
