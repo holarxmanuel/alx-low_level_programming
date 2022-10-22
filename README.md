@@ -1,2 +1,1 @@
-# alx-low_level_programming
-Low level programming
+This is the repository of my prjects
