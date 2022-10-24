@@ -1,7 +1,6 @@
 #include "main.h"
 
 /**
- *
  * swap_int - this swaps the values of two diffrent characters
  * @a: the input
  * @b: the input
