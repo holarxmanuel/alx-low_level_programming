@@ -1,1 +1,1 @@
-This is a directory for exploring pointers
+This is a directory for exploring pointers  exclusively
