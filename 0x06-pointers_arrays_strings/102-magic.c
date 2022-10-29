@@ -1,9 +1,6 @@
 #include <stdio.h>
 
-/**
- * main - the main block
- * Return: void
- */
+
 int main(void)
 {
 	int n;
