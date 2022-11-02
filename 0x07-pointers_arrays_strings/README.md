@@ -1,1 +1,1 @@
-This is a directory for more pointers and arrays
+This is a directory for more pointers and array
