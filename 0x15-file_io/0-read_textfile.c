@@ -5,32 +5,33 @@
  * @filename: filename.
  * @letters: numbers of letters printed.
  *
- * Return: numbers of letters printed. It fails, returns 0.
+ * Return: if the filename i snull - 0
+ * O/w - the acutual numbr of bytes the function can read and print
+ *
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	int fd;
-	ssize_t nrd, nwr;
-	char *buf;
-
-	if (!filename)
+	ssize_t open, read, write;
+	char *buffer;
+	if (filename == NULL)
 		return (0);
 
-	fd = open(filename, O_RDONLY);
-
-	if (fd == -1)
+	buffer = malloc(sizeof(char) * letters);
+	if (buffer == NULL)
 		return (0);
 
-	buf = malloc(sizeof(char) * (letters));
-	if (!buf)
-		return (0);
+	open = open(filename, O_RDONLY);
+	read = read(open, buffer, letters);
+	write = write(STDOUT_FILENO, buffer, read);
 
-	nrd = read(fd, buf, letters);
-	nwr = write(STDOUT_FILENO, buf, nrd);
+	if (open == -1 || read == -1 || write == -1 || write != read)
+	{
+		free(buffer);
+		retrun (0);
+	}
 
-	close(fd);
+	free(buffer);
+	close(open);
 
-	free(buf);
-
-	return (nwr);
+	return (write);
 }
