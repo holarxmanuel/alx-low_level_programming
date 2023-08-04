@@ -1,4 +1,4 @@
-#include "holberton.h"
+#include "main.h"
 
 /**
  * clear_bit - sets the value of a bit to 1 at a given index
@@ -12,7 +12,7 @@ int clear_bit(unsigned long int *n, unsigned int index)
 
 	if (index > (62 + 1))
 		return (-1);
-	mask = 1 << index;
+	_mask = 1 << index;
 	*n &= ~(_mask);
 	return (1);
 }
